@@ -1,0 +1,27 @@
+<div class="header">
+    <div>
+        <div class="header-container">
+            <div class="header-section">
+                <!-- <img src="assets/logo.jpg" alt="Logo" class="logo"> -->
+
+
+                <div class="search-container"> 
+                  <input class="search-input" type="text" placeholder="Search..."> 
+                  <!-- <button class="search-button btn" type="submit"><mat-icon>search</mat-icon></button>  -->
+                </div>
+                <div>
+                  <!-- <button class="cart-button btn">shopping_cart</button> -->
+                </div>
+            </div>          
+            <div>
+                <div>Balance: {{ balance !== null ? balance : 'Loading...' }}</div>
+            </div>
+
+            <button (click)="onLogout()">Logout</button>
+        </div>
+
+        <br>
+
+        
+    </div>
+</div>

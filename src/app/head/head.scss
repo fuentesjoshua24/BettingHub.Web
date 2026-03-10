@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Verdana, sans-serif; 
+  // margin:0
+}
+
+.header {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 64%;
+  height: 100%;
+
+}
+
+.logo {
+  height: 40px;
+  width: 60px;
+}
+
+.search-container {
+  // border: 1px solid black;
+  display: flex;
+  
+}
+
+.search-input {
+  height: 40px;
+  padding: 0 15px;
+  width: 650px;
+  box-sizing: border-box; /* ensures padding doesn’t make input overflow */
+}
+
+.search-button {
+  height: 40px;
+  width: 60px;
+  background-color: white;
+}
+
+.cart-button {
+  height: 40px;
+  width: 40px;
+  outline: none;
+  background-color: white;
+  border: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Target the form field container */
+::ng-deep mat-form-field {
+  height: 10px;
+  width: 650px;
+}
+/* Remove extra vertical padding from wrapper */ 
+::ng-deep .mat-form-field-wrapper { 
+  padding-bottom: 0 !important; 
+  margin: 0 !important; 
+  height: 40px !important; 
+}
+/* Reduce internal padding so it matches 40px height */ 
+::ng-deep .mat-form-field-flex { 
+  height: 40px !important; 
+  align-items: center; /* vertically center input & button */ 
+  padding: 0 !important; /* adjust left/right spacing */ 
+}
+/* Make the input fill the height */ 
+::ng-deep .mat-form-field-infix { 
+  padding: 0 !important; /* remove default vertical padding */ 
+  margin: 0 !important;
+  height: 100% !important; 
+  display: flex; 
+  align-items: center; 
+}
+/* Target the input inside */
+::ng-deep input[matInput] {
+  height: 100%;       /* match parent height */
+  line-height: 40px;  /* vertically center text */
+  padding: 0 8px;    /* breathing room left/right */
+  box-sizing: border-box;
+}
+::ng-deep .mat-icon-button {
+  height: 40px;
+  width: 40px;
+}
+
+::ng-deep .mat-form-field-outline {
+  border-radius: 20px; /* adjust as needed */
+}
+
+::ng-deep .mat-form-field-underline {
+  // background-color: #007BFF;
+  display: none;
+}
+
+::ng-deep .mat-form-field:hover .mat-form-field-underline {
+  // background-color: #0056b3;
+  display: none;
+}
