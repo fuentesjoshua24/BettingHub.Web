@@ -1,0 +1,66 @@
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+nav {
+  flex-shrink: 0;
+  width: 20%;    
+  // min-width: 200px;                 /* expanded width */
+  background-color: #2c3e50;
+  color: white;
+  // padding: 1rem;
+  padding: 0.5rem;
+  transition: width 0.5s ease-in-out; /* smooth slide */
+  overflow: hidden;
+}
+
+nav.shrink {
+  width: 2%;                       /* shrunk width */
+  // padding: 1rem 0.5rem;
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style: none;   /* removes bullets */
+  margin: 0;          /* removes default margin */
+  padding: 0;         /* removes default padding */
+
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  margin: 0.1rem 0;
+  cursor: pointer;
+  // border: 1px solid red;
+}
+
+nav li,
+nav .label,
+.toggle-btn span {
+  user-select: none;     /* prevents text selection */
+  pointer-events: auto;  /* still clickable */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+nav li:hover {
+  background-color: rgba(255,255,255,0.1); /* subtle hover highlight */
+}
+
+.toggle-btn span {
+  cursor: pointer;       /* shows pointer instead of text cursor */
+}
+
+
+/* Content */
+main {
+  flex-grow: 1;
+  background-color: #ecf0f1;
+  padding: 2rem;
+  border: 1px solid blue;
+}

@@ -1,10 +1,29 @@
-      <!-- <div>
-        <ul>
-          <li *ngFor="let user of users">
-            {{ user.name }} - {{ user.email }}
-          </li>
-        </ul>
-      </div> -->
+<div class="nav-container">
+  <!-- Sidebar -->
+  <nav [class.shrink]="isShrunk">
+    <button class="toggle-btn" (click)="toggleNav()">
+      <span *ngIf="!isShrunk">⏪</span>
+      <span *ngIf="isShrunk">⏩</span>
+    </button>
+
+    <ul>
+      <li *ngFor="let item of navItems" (click)="selectItem(item)">
+        <!-- <span class="icon">{{ item.icon }}</span> -->
+        <span class="label" *ngIf="!isShrunk">{{ item.label }}</span>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <main>
+    <h2>{{ selectedItem.label }}</h2>
+    <p>Content for {{ selectedItem.label }} goes here...</p>
+  </main>
+</div>
+
+
+
+
 
 
 <div class="mat-elevation-z8">

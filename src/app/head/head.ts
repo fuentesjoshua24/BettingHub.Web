@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 import { Wallet, WalletService } from '../service/wallet.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-head',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './head.html',
   styleUrl: './head.scss',
 })
@@ -22,12 +23,19 @@ export class Head {
 
 
   ngOnInit() {
+    this.loadBalance();
+      //   const userId = Number(localStorage.getItem('userId'));
+      //   console.log('UserId from localStorage:', userId);
+      //     this.walletService.getWalletByUserId(userId).subscribe((data) => {
+
+      // });
+  }
+
+   loadBalance() {
     const userId = Number(localStorage.getItem('userId'));
-    console.log('UserId from localStorage:', userId);
     if (userId) {
       this.walletService.getWalletByUserId(userId).subscribe({
         next: (wallet) => {
-          console.log('Wallet data:', wallet);
           this.balance = wallet.balance;
           this.currency = wallet.currency;
         },
@@ -38,13 +46,13 @@ export class Head {
         }
       });
     }
-      //   const userId = Number(localStorage.getItem('userId'));
-      //   console.log('UserId from localStorage:', userId);
-      //     this.walletService.getWalletByUserId(userId).subscribe((data) => {
-
-      // });
   }
 
+  refreshBalance() {
+    // console.log('Refreshing balance...');
+    this.loadBalance(); // just call the same method again
+    // console.log('Balance after refresh:', this.balance);
+  }
 }
 
 

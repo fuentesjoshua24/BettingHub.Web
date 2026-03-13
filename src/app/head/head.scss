@@ -26,7 +26,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 64%;
+  // width: 64%;
+  width: 90%;
   height: 100%;
 
 }
@@ -37,7 +38,7 @@ body {
 }
 
 .search-container {
-  // border: 1px solid black;
+  border: 1px solid black;
   display: flex;
   
 }
@@ -66,6 +67,29 @@ body {
 .btn {
   cursor: pointer;
 }
+
+.balance-container {
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid black;
+  width: 100px;
+  height: 40px;
+  display: flex;              /* make it a flex container */
+  align-items: center;        /* vertical center */
+  justify-content: space-between;  
+  padding: 10px;
+  border-radius: 5px;
+    /* horizontal center */
+}
+
+.balance-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 
 
 

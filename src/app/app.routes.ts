@@ -3,9 +3,15 @@ import { Home } from './home/home';
 import { Homepage } from './homepage/homepage';
 import { Login } from './login/login';
 import { Authguard } from './service/authguard';
+import { Register } from './register/register';
+import { Forgotpassword } from './forgotpassword/forgotpassword';
+import { Resetpassword } from './resetpassword/resetpassword';
 
 export const routes: Routes = [
   { path: 'login', component: Login },
+  { path: 'register', component: Register },
+  { path: 'forgot-password', component: Forgotpassword },
+  { path: 'reset-password', component: Resetpassword },
   {
     path: '',
     component: Home, // ✅ Home is the parent
